@@ -1,0 +1,72 @@
+
+sl = []
+try:
+  sl = input("Введите символ и два числа ")
+  assert(sl[0] == "-")
+  assert(sl[0] == "+")
+  assert(sl[0] == "/")
+  assert(sl[0] == ":")
+  assert(sl[0] == "*")
+
+  if sl[3] != " ":
+    print("Введите только 2 числа")
+    raise SystemExit(1)
+except IndexError:
+  print("Ввод только чисел")
+except AssertionError:
+  print("Доступны только операции +, -, *, /")
+print(sl[0])
+
+
+try: 
+  if sl[0]=="+":
+    p = int(sl[1])
+    k = int(sl[2])
+    s = p + k
+    print ("Ответ", s)
+except ValueError:
+  print("Пожалуста, пишите без запятых и пробелов")
+
+
+try: 
+  if sl[0]=="-":
+    p = int(sl[1])
+    k = int(sl[2])
+    q = p - k
+    print ("Ответ", q)
+except ValueError:
+  print("Пожалуста, пишите без запятых и пробелов")
+
+
+try: 
+  if sl[0]==":":
+    p = int(sl[1])
+    k = int(sl[2])
+    e = p / k
+    print ("Ответ", e)
+except ValueError:
+  print("Пожалуста, пишите без запятых и пробелов")
+except ZeroDivisionError:
+  print("На ноль делить нельзя")
+
+
+try: 
+  if sl[0]=="/":
+    p = int(sl[1])
+    k = int(sl[2])
+    e = p / k
+    print ("Ответ", e)
+except ValueError:
+  print("Пожалуста, пишите без запятых и пробелов")
+except ZeroDivisionError:
+  print("На ноль делить нельзя")
+
+
+try: 
+  if sl[0]=="*":
+    p = int(sl[1])
+    k = int(sl[2])
+    r = p * k
+    print ("Ответ", r)
+except ValueError:
+  print("Пожалуста, пишите без запятых и пробелов")
